@@ -1,2 +1,2 @@
 # Father-Agnel-ITI
-An appp for ITI collage Using Flutter
+An appp for ITI college Using Flutter
