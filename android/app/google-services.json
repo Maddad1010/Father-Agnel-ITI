@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "99847673222",
+    "project_id": "fragneliti",
+    "storage_bucket": "fragneliti.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99847673222:android:489c1725c9829613bb8807",
+        "android_client_info": {
+          "package_name": "com.example.fragneliti_clone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACJnOMZYAUYXuaMDP_MxTAS9CURMoSI08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

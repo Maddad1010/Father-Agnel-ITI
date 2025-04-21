@@ -1,0 +1,66 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+    id 'com.google.gms.google-services' // Required for Firebase
+}
+
+android {
+    namespace = "com.example.fragneliti_clone"
+    compileSdk = 35 // Align with Play Store requirements (34 is the latest as of 2024)
+
+    defaultConfig {
+        applicationId = "com.example.fragneliti_clone"
+        minSdk = 23 // Minimum to support 95%+ devices
+        targetSdk = 35 // Required for Play Store in 2024
+        versionCode = flutter.versionCode.toInteger() // Ensure versionCode is an integer
+        versionName = flutter.versionName
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+        coreLibraryDesugaringEnabled = true // Enable desugaring for Java 8+ APIs
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            debuggable true
+        }
+        release {
+            minifyEnabled true // Enable ProGuard for smaller APKs
+            shrinkResources true // Remove unused resources
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+    }
+
+    // Enable viewBinding if needed (optional)
+    viewBinding {
+        enabled = true
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:33.4.0') // Firebase BoM
+    implementation 'com.google.firebase:firebase-analytics' // Firebase Analytics
+    implementation 'com.google.firebase:firebase-storage' // Firebase Storage
+    implementation 'com.google.firebase:firebase-auth' // Firebase Authentication
+    implementation 'com.google.firebase:firebase-firestore' // Firebase Firestore
+    implementation 'com.google.firebase:firebase-messaging' // Firebase Cloud Messaging
+
+    // Core Library Desugaring for Java 8+ APIs
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.3'
+
+    // Add other dependencies here if needed
+}
