@@ -1,6 +1,6 @@
 # fragneliti_clone
 
-A new Flutter project.
+A Flutter project Buitl Just For fr Agnel ITI College.
 
 ## Getting Started
 
